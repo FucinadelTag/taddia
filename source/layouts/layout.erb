@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Optometria Comportamentale" %></title>
+
+    <meta name="description" content="<%= current_page.data.description || "Optometria Comportamentale" %>" />
+
+    <%= stylesheet_link_tag "all" %>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700' rel='stylesheet' type='text/css'>
+    <script src="https://use.fontawesome.com/95e5f2ac8e.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.0/js.cookie.min.js"></script>
+
+    <!-- fotorama.css & fotorama.js. -->
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+
+
+
+
+    <% if current_page.data.headCode  %>
+        <%= current_page.data.headCode %>
+    <% end %>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '503190316680267', {
+    em: 'insert_email_variable,'
+    });
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=503190316680267&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+
+  </head>
+
+    <body>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-19846103-38', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+        <div class="top-bar">
+            <div class="top-bar-title"><a href="/">Franchising Risarcimento Danni</a></div>
+        </div>
+
+        <section class="title-container show-for-medium" style="background: url(<%= current_page.data.immagineTestata %>) center no-repeat; background-size: cover;">
+            <div class="row clearfix">
+                <div class="title float-center">
+                    <h1 class="big">
+                        <% if current_page.data.testata.prima_riga != ''  %>
+                            <%= current_page.data.testata.prima_riga %>
+                        <% end %>
+                    </h1>
+                    <span class="medium">
+                        <% if current_page.data.testata.seconda_riga != ''  %>
+                            <%= current_page.data.testata.seconda_riga %><br />
+                        <% end %>
+                    </span>
+
+                    <% if current_page.data.testata.hasButton != 0  %>
+                        <span>
+                            <%= partial "partials/callToAction" %>
+                        </span>
+                    <% end %>
+                </div>
+            </div>
+    </section>
+
+    <section class="title-container show-for-small-only">
+            <div class="row clearfix">
+                <div class="title float-center">
+                    <h1 class="title-mobile">
+                        <% if current_page.data.testata.prima_riga != ''  %>
+                            <%= current_page.data.testata.prima_riga %>
+                        <% end %>
+                    </h1>
+                    <br>
+                    <h2 class="medium">
+                        <% if current_page.data.testata.seconda_riga != ''  %>
+                            <%= current_page.data.testata.seconda_riga %><br />
+                        <% end %>
+                    </h2>
+                    <img src="<%= current_page.data.immagineTestata %>">
+                    <br><br>
+                    <% if current_page.data.testata.hasButton != 0  %>
+                        <h3 class="show-for-medium">
+                            <%= partial "partials/callToAction" %>
+                        </h3>
+                    <% end %>
+                </div>
+            </div>
+    </section>
+
+        <%= yield %>
+
+        <%= partial "partials/footer" %>
+
+
+        <%= javascript_include_tag  "all" %>
+
+        <!-- COOKIES POLICY-->
+        <script type="text/javascript">
+            var _iub = _iub || [];
+            _iub.csConfiguration = {
+                cookiePolicyId: 7902785,
+                siteId: 600102,
+                priorConsent: false,
+                banner: {
+                    slideDown: false,
+                    applyStyles: false,
+                    fontSize: "11px",
+                    textColor: "#ffffff",
+                    backgroundColor: '#9a9a9a',
+                    content: "<p>Questo sito si avvale di cookie necessari al suo funzionamento. Se vuoi saperne di pi&ugrave; consulta la %{cookie_policy_link}.<br />Chiudendo questo banner acconsenti all’uso dei cookie.</p>"
+                }
+            };
+            (function (w, d) {
+                var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/cookie_solution/iubenda_cs.js"; tag.parentNode.insertBefore(s, tag); };
+                if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; }
+            })(window, document);
+        </script>
+
+
+        <!-- <script type="text/javascript">
+            // var _iub = _iub || [];
+            // _iub.csConfiguration = {
+            //     cookiePolicyId: 846066,
+            //     siteId: 390159,
+            //     lang: "it",
+            //     priorConsent: false
+            // };
+        </script>
+        <script type="text/javascript" src="//cdn.iubenda.com/cookie_solution/safemode/iubenda_cs.js" charset="UTF-8" async></script> -->
+
+
+        <% if current_page.data.conversionCode  %>
+            <%= current_page.data.conversionCode %>
+        <% end %>
+  </body>
+
+</html>

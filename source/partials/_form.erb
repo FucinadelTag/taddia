@@ -1,0 +1,97 @@
+<section class="form">
+    <div id="form" class="row evidenza clearfix">
+        <div class="float-center">
+            <span><i class="fa fa-info" aria-hidden="true"></i> In caso di Richieste o Domande</span><br>
+            Scrivici SUBITO. Ti risponderemo in pochi minuti!
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="small-12 medium-12 <%= form_class_large %> columns callout">
+            <form data-abide novalidate accept-charset="UTF-8" action="https://formkeep.com/f/507c9044be16" method="POST">
+                <!-- <div data-abide-error class="alert callout" style="display: none;">
+                    <p><i class="fi-alert"></i> Si sono verificati alcuni errori evidenziati in rosso.</p>
+                </div> -->
+                <input type="hidden" id="deviceForm" name="device" value="large">
+                <input type="hidden" id="campagnaForm" name="campagna" value="direct">
+                <input type="hidden" id="risultatoTest" name="risultatoTest" value="">
+
+                <div class="row">
+                    <div class="small-12 columns">
+                        <label>Nome e Cognome*
+                            <input type="text" name="nome_cognome" required>
+                            <span class="form-error">
+                                Il campo Nome è obbligatorio
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-6 columns">
+                        <label>E-Mail*
+                            <input type="email" name="email" required>
+                            <span class="form-error">
+                                Il campo E-Mail è obbligatorio
+                            </span>
+                        </label>
+                    </div>
+                    <div class="small-6 columns">
+                        <label>Telefono
+                            <input type="text" name="telefono">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 medium-12 columns">
+                        <label>
+                            Richieste o Domande?
+                            <textarea rows="3" cols="50" name="messaggio"></textarea>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="small-12 columns">
+                        <input type="checkbox" name="privacy" id="privacy" required checked>
+                            <label for="privacy">
+                                Ho letto e accetto l'informativa sulla <a href="/privacy" target="_blank">Privacy</a>
+                                <span class="form-error">
+                                    <p>Accetta l'informativa sulla privacy!</p>
+                                </span>
+                            </label>
+                    </div>
+                </div>
+
+
+
+                <div class="row align-center">
+                    <fieldset class="small-12 columns">
+                        <button class="hollow button" type="submit" value="Submit">Invia la tua richiesta</button>
+                    </fieldset>
+                </div>
+          </form>
+        </div>
+        <div class="small-12 medium-12 <%= phone_class_large %> columns clearfix">
+                <div class="row">
+                    <div class="columns vantaggiForm">
+                        <p>
+                            <div class="box_nverde">
+                                <span>Se preferisci usa il Numero Verde gratuito!</span><br />
+                                <span class="numero-verde"> 800 126 799 </span><br />
+                                <span>da Lunedì a Venerdì 9.00 - 13.00 e 14.30 - 18.30</span>
+                            </div>
+                        </p>
+                        <p>
+                            <i class="fa fa-thumbs-o-up"></i> Risposte rapide
+                        </p>
+                        <p>
+                            <i class="fa fa-thumbs-o-up"></i> Consulenza telefonica gratuita
+                        </p>
+                        <p>
+                            <i class="fa fa-thumbs-o-up"></i> Professionalità
+                        </p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>

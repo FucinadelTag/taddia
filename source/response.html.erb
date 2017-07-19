@@ -1,0 +1,53 @@
+---
+title: >
+        Disturbi Visivi - Risolvi i Tuoi problemi di Stanchezza
+
+description: >
+        Ti Capita di Avere Mal di Testa, Mal di Schiena o la Vista Affaticata? Sono Segnali da Non Sottovalutare! Fai il Test e Scopri se la Tua Vista è a Rischio.
+
+testata:
+    prima_riga: <span id="primaRiga" class="message upper"></span>
+    hasButton: 0
+    seconda_riga: >
+            di problemi legati all'equilibrio visivo!
+
+immagineTestata: https://prismic-io.s3.amazonaws.com/optometrista/2f380e00bec6f5559f9075fc5b3ec9c849517e57_occhi-stanchi-pc-7.jpg
+
+headCode: >
+
+conversionCode: >
+
+        <script type="text/javascript">
+            showResponse ();
+        </script>
+
+        <script>
+            fbq('track', 'Test', {
+            value: 0,
+            currency: 'EUR'
+            });
+        </script>
+
+---
+
+<%= partial "partials/response_test"%>
+
+
+<div id='risultato'></div>
+
+<div class="spazio_bianco"></div>
+
+<%= partial "partials/form", :locals => { :form_class_large => "large-7", :phone_class_large => "large-5"} %>
+
+<div class="spazio_bianco"></div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <h2>Come possiamo aiutarti:</h2>
+    </div>
+</div>
+<%= partial "partials/soluzione" %>
+
+<div class="spazio_bianco"></div>
+
+<%= partial "partials/chi_siamo" %>
