@@ -7,6 +7,7 @@ $blue: #00aeef;
 $evidence-color: #ffed00 !default;
 $button-background-hover: scale-color($evidence-color, $lightness: -15%);
 $rosso-color: #FF0A0A !default;
+$rosso-taddia: #7C0C3E;
 $ctaButton-header-color: $evidence-color !default;
 $ctaButton-radius: 30px !default;
 
@@ -17,6 +18,16 @@ div.spazio_bianco {
 div.titolo_blocco {
   padding-bottom: 3rem;
 }
+
+
+.img_recensione {
+  padding: 10px;
+}
+
+p.recensione {
+    padding: 10px;
+}
+
 
 .box_domande {
   background-color: scale-color($blue, $lightness: -30%);
@@ -115,12 +126,16 @@ h1{
         color: #000000;
         .big {
             text-transform: none;
-            font-weight: 700;
-            font-style: italic;
+            font-weight: 100;
+            font-size: rem-calc(40, null);
+
+            .diff {
+              color: $rosso-taddia;
+            }
         }
 
         .medium {
-            font-size: 3vw;
+            font-size: rem-calc(40, null);
             text-transform: none;
             font-weight: 100;
             font-style: normal;
@@ -145,7 +160,7 @@ h1{
     .sconto {
         font-size: rem-calc(60, null);
         font-weight: 400;
-        color: $rosso-color;
+        color: $rosso-taddia;
         line-height: 5rem;
     }
 

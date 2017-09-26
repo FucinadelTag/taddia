@@ -14,7 +14,7 @@
     <meta name="description" content="<%= current_page.data.description || "Optometria Comportamentale" %>" />
 
     <%= stylesheet_link_tag "all" %>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i" rel="stylesheet">
     <script src="https://use.fontawesome.com/95e5f2ac8e.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -70,12 +70,12 @@
 
         <section class="title-container show-for-medium" style="background: url(<%= current_page.data.immagineTestata %>) center no-repeat; background-size: cover;">
             <div class="row clearfix">
-                <div class="title float-center">
-                    <h1 class="big">
+                <div class="title float-left">
+                    <div class="big">
                         <% if current_page.data.testata.prima_riga != ''  %>
                             <%= current_page.data.testata.prima_riga %>
                         <% end %>
-                    </h1>
+                    </div>
                     <span class="medium">
                         <% if current_page.data.testata.seconda_riga != ''  %>
                             <%= current_page.data.testata.seconda_riga %><br />
